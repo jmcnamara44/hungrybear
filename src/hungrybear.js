@@ -39,9 +39,8 @@ export let bear = {
     }
   },
   feed: function(amount) {
-    let that = this;
-    return function(food) {
-      that.foodLevel += amount;
+    return (food) => {
+      this.foodLevel += amount;
       return `The bear ate the ${food}! Food level goes up ${amount}!`;
     }
   }
